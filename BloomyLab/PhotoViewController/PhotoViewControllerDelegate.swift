@@ -10,6 +10,7 @@ import UIKit
 
 //MARK: - UICollectionViewDelegate
 extension PhotoViewController: UICollectionViewDelegate {
+    
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         if let vc = UIStoryboard.init(name: "Main", bundle: Bundle.main).instantiateViewController(withIdentifier: "detailVC") as? DetailViewController {
             
@@ -23,6 +24,7 @@ extension PhotoViewController: UICollectionViewDelegate {
 
 //MARK: - UICollectionViewDataSource
 extension PhotoViewController: UICollectionViewDataSource {
+    
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return photosArray.count
     }
